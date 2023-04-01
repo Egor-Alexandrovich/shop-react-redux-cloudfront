@@ -5,4 +5,6 @@
 
 ## S3-website: http://automated-deploy-bucket-east.s3-website-us-east-1.amazonaws.com/
 
+## update App npm run cloudfront:update:build:deploy
+
 
