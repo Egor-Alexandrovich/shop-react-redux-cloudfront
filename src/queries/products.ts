@@ -17,10 +17,15 @@ export function useAvailableProducts() {
 }
 
 export function useProducts() {
-  return useQuery<Product[], AxiosError>("available-products", async () => {
-    const res = await axios.get<Product[]>(`${API_PATHS.product}/products`);
-    return res.data;
-  });
+  return useQuery<AvailableProduct[], AxiosError>(
+    "available-products",
+    async () => {
+      const res = await axios.get<AvailableProduct[]>(
+        `${API_PATHS.product}/products`
+      );
+      return res.data;
+    }
+  );
 }
 
 export function useInvalidateAvailableProducts() {
