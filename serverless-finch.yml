@@ -1,0 +1,17 @@
+service: manual-deploy-bucket-east
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+  profile: sandx
+
+plugins:
+  - serverless-finch
+
+custom:
+  client:
+    bucketName: manual-deploy-bucket-east
+    distributionFolder: dist
